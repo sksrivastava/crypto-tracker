@@ -22,7 +22,6 @@ This application collects cryptocurrency price data from the CoinGecko public AP
 │   ├── crypto-prices/     # Stores collected cryptocurrency price data
 │   ├── rpc-client-meta/ # Stores client's DHT seed
 │   └── rpc-server-meta/ # Stores server's DHT/RPC seeds and public key
-├── node_modules/          # NPM dependencies
 ├── src/                   # Source code
 │   ├── components/
 │   │   └── scheduler.js   # Task scheduler
@@ -34,7 +33,6 @@ This application collects cryptocurrency price data from the CoinGecko public AP
 │   ├── client.js          # Example RPC client
 │   └── server.js          # Main RPC server application
 ├── crypto_data_export.json # Optional: Created by the visualization script
-├── package-lock.json
 ├── package.json
 ├── read_crypto_db_for_visualization.js # Script to export DB data to JSON
 └── README.md
@@ -164,6 +162,3 @@ To start the application with a completely fresh database and new server/client 
     *   Increase `FETCH_INTERVAL_MS` in `src/server.js` to a larger value (e.g., `5 * 60 * 1000` for 5 minutes).
     *   Consider subscribing to a CoinGecko paid API plan for higher rate limits if you need more frequent updates for a production environment.
 
-## Stopping the Application
-
--   Press `Ctrl+C` in each terminal window where a component (DHT node, server, client) is running.
